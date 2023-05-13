@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Yellow bar with Vueling logo at the top -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFC62F">
+
+        <ImageView
+            android:id="@+id/vueling_logo"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/vueling_logo" />
+
+    </RelativeLayout>
+
+    <!-- Logo, border, and button -->
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rounded_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="191dp"
+                android:layout_height="188dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/vuelingo_logo" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Text input -->
+    <RelativeLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/player_name_input"
+            android:layout_width="249dp"
+            android:layout_height="50dp"
+            android:hint="Enter your name"
+            android:inputType="text"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:layout_marginTop="87dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
