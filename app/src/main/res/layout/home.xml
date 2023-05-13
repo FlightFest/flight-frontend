@@ -8,14 +8,14 @@
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FEE12B">
+        android:background="#FFC62F">
 
         <ImageView
             android:id="@+id/vueling_logo"
-            android:layout_width="100dp"
+            android:layout_width="139dp"
             android:layout_height="match_parent"
-            android:src="@drawable/vueling_logo"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:src="@drawable/vueling_logo" />
     </RelativeLayout>
 
     <!-- Logo and text input in the middle of the screen -->
@@ -31,7 +31,8 @@
             android:layout_height="200dp"
             android:src="@drawable/vuelingo_logo"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corners" />
 
         <EditText
             android:id="@+id/player_name_input"
@@ -45,3 +46,4 @@
     </RelativeLayout>
 
 </RelativeLayout>
+
