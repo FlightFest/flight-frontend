@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,23 +17,44 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:src="@drawable/vueling_logo" />
+
     </RelativeLayout>
 
-    <!-- Logo and text input in the middle of the screen -->
+    <!-- Logo, border, and button -->
     <RelativeLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:gravity="center">
 
-        <ImageView
-            android:id="@+id/main_logo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/vuelingo_logo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/rounded_corners" />
+        <RelativeLayout
+            android:id="@+id/rounded_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/main_logo"
+                android:layout_width="191dp"
+                android:layout_height="188dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/vuelingo_logo" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- Text input -->
+    <RelativeLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
 
         <EditText
             android:id="@+id/player_name_input"
@@ -41,9 +63,24 @@
             android:hint="Enter your name"
             android:inputType="text"
             android:textAlignment="center"
-            android:layout_below="@id/main_logo"
             android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:layout_marginTop="80dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready" />
+
     </RelativeLayout>
 
 </RelativeLayout>
-
