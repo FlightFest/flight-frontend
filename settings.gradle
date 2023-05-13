@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Vuelin-Go-front"
+rootProject.name = "flight-frontend"
 include ':app'
