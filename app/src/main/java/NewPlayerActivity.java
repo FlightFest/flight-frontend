@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.UUID;
 
-public class NewPlayer extends Activity {
+public class NewPlayerActivity extends Activity {
 
     private static final UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // replace with your UUID
 
