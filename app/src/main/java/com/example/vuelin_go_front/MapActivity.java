@@ -1,3 +1,5 @@
+package com.example.vuelin_go_front;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
