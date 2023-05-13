@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Yellow bar with Vueling logo at the top -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFC62F">
+
+        <ImageView
+            android:id="@+id/vueling_logo"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/vueling_logo" />
+
+    </RelativeLayout>
+
+    <!-- Google Maps fragment -->
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/top_bar"/>
+
+    <!-- You Arrived! text -->
+    <TextView
+        android:id="@+id/you_arrived_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_fragment"
+        android:layout_centerHorizontal="true"
+        android:text="You Arrived!"
+        android:textSize="24sp"/>
+
+    <!-- Separator line -->
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/you_arrived_text"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/black"/>
+
+    <!-- Eiffel Tower title -->
+    <TextView
+        android:id="@+id/eiffel_tower_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eiffel Tower"
+        android:textSize="20sp"
+        android:layout_below="@id/separator_line"
+        android:padding="16dp"/>
+
+    <!-- Eiffel Tower text -->
+    <TextView
+        android:id="@+id/eiffel_tower_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The Eiffel Tower is a famous landmark located in Paris, France. It was constructed in 1889 as the entrance arch for the World's Fair and was named after its designer, Gustave Eiffel. The tower stands at 324 meters tall and is made of wrought iron. It has become one of the most visited tourist attractions in the world and is widely regarded as a symbol of France and its culture."
+        android:layout_below="@id/eiffel_tower_title"
+        android:padding="16dp"/>
+
+    <!-- Your Points title -->
+    <TextView
+        android:id="@+id/points_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your score"
+        android:textSize="20sp"
+        android:layout_below="@id/eiffel_tower_text"
+        android:padding="16dp"/>
+
+    <!-- Your Points number -->
+    <TextView
+        android:id="@+id/points_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textSize="24sp"
+        android:layout_below="@id/points_title"
+        android:padding="16dp"/>
+
+    <!-- Scoreboard button -->
+    <Button
+        android:id="@+id/scoreboard_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scoreboard"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"/>
+
+</RelativeLayout>

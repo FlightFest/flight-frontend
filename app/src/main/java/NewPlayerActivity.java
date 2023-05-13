@@ -4,8 +4,11 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.pm.PackageManager;
+import android.widget.EditText;
 
 import androidx.core.app.ActivityCompat;
+
+import com.example.vuelin_go_front.R;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -21,6 +24,8 @@ public class NewPlayerActivity extends Activity {
     private OutputStream outputStream;
     private BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
+    private EditText input;
+
     public void connectToServer(String address) {
         BluetoothDevice device = bluetoothAdapter.getRemoteDevice(address);
         try {
@@ -34,8 +39,10 @@ public class NewPlayerActivity extends Activity {
             socket.connect();
             outputStream = socket.getOutputStream();
 
+            input = (EditText) findViewById(R.id.player_name_input);
+
             // get name from input text
-            String playerName = "defaultPlayerName"; // replace with actual input text value
+            String playerName = input.getText().toString(); // input text value
 
             // send name to server
             byte[] playerNameBytes = playerName.getBytes();
