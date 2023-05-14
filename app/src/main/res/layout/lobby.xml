@@ -35,25 +35,13 @@
         android:id="@+id/player_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/countdown_timer"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="40dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/countdown_timer"
+        android:layout_marginTop="20dp"/>
 
-        <!-- Left column -->
-        <LinearLayout
-            android:id="@+id/left_column"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical" />
 
-        <!-- Right column -->
-        <LinearLayout
-            android:id="@+id/right_column"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical" />
-
-    </LinearLayout>
 
 </RelativeLayout>
