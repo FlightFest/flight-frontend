@@ -20,7 +20,6 @@
 
     </RelativeLayout>
 
-    <!-- Google Maps fragment -->
     <fragment
         android:id="@+id/map_fragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -28,6 +27,15 @@
         android:layout_height="match_parent"
         android:layout_below="@id/top_bar"
         android:layout_above="@id/text_numbers_section" />
+
+    <!-- Image view in the center of the map fragment -->
+    <ImageView
+        android:id="@+id/center_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/stickman" />
+
 
     <!-- Text and numbers section -->
     <LinearLayout
@@ -75,12 +83,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Time: 10 min"
-                android:textSize="14sp" />
+                android:text="Time: 5:00"
+                android:textSize="14sp"
+                android:gravity="end"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
 </RelativeLayout>
-
